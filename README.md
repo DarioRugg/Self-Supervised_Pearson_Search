@@ -19,6 +19,8 @@ This repository hosts our code for our paper [Norm-Aware Embedding for Efﬁcien
    ```
 
 
+Also tested with Pytorch 1.8.1 and cu111, with minor changes
+
 
 ## Experiments
 
