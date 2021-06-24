@@ -105,3 +105,6 @@ venv.bak/
 # custom
 logs/
 data/
+
+# IDE files
+**/.idea/

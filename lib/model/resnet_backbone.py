@@ -63,6 +63,8 @@ class RCNNConvHead(nn.Sequential):
 
 def resnet_backbone(backbone_name, pretrained,
                     return_res4=True, GAP=True):
+
+    # Here I must load the model finetuned with self supervision
     backbone = resnet.__dict__[backbone_name](
         pretrained=pretrained)
 
