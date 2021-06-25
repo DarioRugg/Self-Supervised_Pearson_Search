@@ -1,1 +1,1 @@
-from .res50_faster_rcnn import *
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
