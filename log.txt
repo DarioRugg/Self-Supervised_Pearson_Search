@@ -1,0 +1,388 @@
+INFO 2021-06-24 18:56:22,996 train.py:  66: Env set for rank: 0, dist_rank: 0
+INFO 2021-06-24 18:56:22,997 env.py:  41: CLICOLOR:	1
+INFO 2021-06-24 18:56:22,998 env.py:  41: CLOUDSDK_CONFIG:	/content/.config
+INFO 2021-06-24 18:56:22,998 env.py:  41: CLOUDSDK_PYTHON:	python3
+INFO 2021-06-24 18:56:22,998 env.py:  41: COLAB_GPU:	0
+INFO 2021-06-24 18:56:22,998 env.py:  41: CUDA_VERSION:	11.0.3
+INFO 2021-06-24 18:56:22,999 env.py:  41: CUDNN_VERSION:	8.0.4.30
+INFO 2021-06-24 18:56:22,999 env.py:  41: DATALAB_SETTINGS_OVERRIDES:	{"kernelManagerProxyPort":6000,"kernelManagerProxyHost":"172.28.0.3","jupyterArgs":["--ip=\"172.28.0.2\""],"debugAdapterMultiplexerPath":"/usr/local/bin/dap_multiplexer","enableLsp":true}
+INFO 2021-06-24 18:56:22,999 env.py:  41: DEBIAN_FRONTEND:	noninteractive
+INFO 2021-06-24 18:56:22,999 env.py:  41: ENV:	/root/.bashrc
+INFO 2021-06-24 18:56:23,000 env.py:  41: GCE_METADATA_TIMEOUT:	0
+INFO 2021-06-24 18:56:23,000 env.py:  41: GCS_READ_CACHE_BLOCK_SIZE_MB:	16
+INFO 2021-06-24 18:56:23,000 env.py:  41: GIT_PAGER:	cat
+INFO 2021-06-24 18:56:23,001 env.py:  41: GLIBCPP_FORCE_NEW:	1
+INFO 2021-06-24 18:56:23,001 env.py:  41: GLIBCXX_FORCE_NEW:	1
+INFO 2021-06-24 18:56:23,001 env.py:  41: HOME:	/root
+INFO 2021-06-24 18:56:23,001 env.py:  41: HOSTNAME:	ec3aa726cd9f
+INFO 2021-06-24 18:56:23,001 env.py:  41: JPY_PARENT_PID:	49
+INFO 2021-06-24 18:56:23,002 env.py:  41: LANG:	en_US.UTF-8
+INFO 2021-06-24 18:56:23,002 env.py:  41: LAST_FORCED_REBUILD:	20210614
+INFO 2021-06-24 18:56:23,002 env.py:  41: LD_LIBRARY_PATH:	/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+INFO 2021-06-24 18:56:23,002 env.py:  41: LD_PRELOAD:	/usr/lib/x86_64-linux-gnu/libtcmalloc.so.4
+INFO 2021-06-24 18:56:23,002 env.py:  41: LIBRARY_PATH:	/usr/local/cuda/lib64/stubs
+INFO 2021-06-24 18:56:23,003 env.py:  41: LOCAL_RANK:	0
+INFO 2021-06-24 18:56:23,003 env.py:  41: MPLBACKEND:	module://ipykernel.pylab.backend_inline
+INFO 2021-06-24 18:56:23,003 env.py:  41: NCCL_VERSION:	2.7.8
+INFO 2021-06-24 18:56:23,003 env.py:  41: NO_GCE_CHECK:	True
+INFO 2021-06-24 18:56:23,003 env.py:  41: NVIDIA_DRIVER_CAPABILITIES:	compute,utility
+INFO 2021-06-24 18:56:23,004 env.py:  41: NVIDIA_REQUIRE_CUDA:	cuda>=11.0 brand=tesla,driver>=418,driver<419 brand=tesla,driver>=440,driver<441 brand=tesla,driver>=450,driver<451
+INFO 2021-06-24 18:56:23,004 env.py:  41: NVIDIA_VISIBLE_DEVICES:	all
+INFO 2021-06-24 18:56:23,004 env.py:  41: OLDPWD:	/
+INFO 2021-06-24 18:56:23,004 env.py:  41: PAGER:	cat
+INFO 2021-06-24 18:56:23,004 env.py:  41: PATH:	/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/tools/node/bin:/tools/google-cloud-sdk/bin:/opt/bin
+INFO 2021-06-24 18:56:23,005 env.py:  41: PWD:	/content/drive/My Drive/Università/Data Science/Second Year/Second Semester/Path of Excellence/Notebooks/Self-Supervised_Pearson_Search
+INFO 2021-06-24 18:56:23,005 env.py:  41: PYDEVD_USE_FRAME_EVAL:	NO
+INFO 2021-06-24 18:56:23,005 env.py:  41: PYTHONPATH:	/env/python
+INFO 2021-06-24 18:56:23,005 env.py:  41: PYTHONWARNINGS:	ignore:::pip._internal.cli.base_command
+INFO 2021-06-24 18:56:23,005 env.py:  41: RANK:	0
+INFO 2021-06-24 18:56:23,006 env.py:  41: SHELL:	/bin/bash
+INFO 2021-06-24 18:56:23,006 env.py:  41: SHLVL:	1
+INFO 2021-06-24 18:56:23,006 env.py:  41: TBE_CREDS_ADDR:	172.28.0.1:8008
+INFO 2021-06-24 18:56:23,006 env.py:  41: TERM:	xterm-color
+INFO 2021-06-24 18:56:23,006 env.py:  41: TF_FORCE_GPU_ALLOW_GROWTH:	true
+INFO 2021-06-24 18:56:23,007 env.py:  41: WORLD_SIZE:	8
+INFO 2021-06-24 18:56:23,010 env.py:  41: _:	/usr/bin/python3
+INFO 2021-06-24 18:56:23,013 misc.py:  86: Set start method of multiprocessing to forkserver
+INFO 2021-06-24 18:56:23,014 train.py:  77: Setting seed....
+INFO 2021-06-24 18:56:23,014 misc.py:  99: MACHINE SEED: 0
+INFO 2021-06-24 18:56:23,051 hydra_config.py: 140: Training with config:
+INFO 2021-06-24 18:56:23,060 hydra_config.py: 144: {'CHECKPOINT': {'APPEND_DISTR_RUN_ID': False,
+                'AUTO_RESUME': True,
+                'BACKEND': 'disk',
+                'CHECKPOINT_FREQUENCY': 1,
+                'CHECKPOINT_ITER_FREQUENCY': -1,
+                'DIR': '.',
+                'LATEST_CHECKPOINT_RESUME_FILE_NUM': 1,
+                'OVERWRITE_EXISTING': False,
+                'USE_SYMLINK_CHECKPOINT_FOR_RESUME': False},
+ 'CLUSTERFIT': {'CLUSTER_BACKEND': 'faiss',
+                'FEATURES': {'DATASET_NAME': '',
+                             'DATA_PARTITION': 'TRAIN',
+                             'LAYER_NAME': ''},
+                'NUM_CLUSTERS': 16000,
+                'N_ITER': 50},
+ 'DATA': {'DDP_BUCKET_CAP_MB': 25,
+          'ENABLE_ASYNC_GPU_COPY': True,
+          'NUM_DATALOADER_WORKERS': 4,
+          'PIN_MEMORY': True,
+          'TEST': {'BATCHSIZE_PER_REPLICA': 256,
+                   'COLLATE_FUNCTION': 'default_collate',
+                   'COLLATE_FUNCTION_PARAMS': {},
+                   'COPY_DESTINATION_DIR': '',
+                   'COPY_TO_LOCAL_DISK': False,
+                   'DATASET_NAMES': ['imagenet1k_folder'],
+                   'DATA_LIMIT': -1,
+                   'DATA_PATHS': [],
+                   'DATA_SOURCES': [],
+                   'DEFAULT_GRAY_IMG_SIZE': 224,
+                   'DROP_LAST': False,
+                   'ENABLE_QUEUE_DATASET': False,
+                   'INPUT_KEY_NAMES': ['data'],
+                   'LABEL_PATHS': [],
+                   'LABEL_SOURCES': [],
+                   'LABEL_TYPE': 'sample_index',
+                   'MMAP_MODE': True,
+                   'TARGET_KEY_NAMES': ['label'],
+                   'TRANSFORMS': [],
+                   'USE_STATEFUL_DISTRIBUTED_SAMPLER': False},
+          'TRAIN': {'BATCHSIZE_PER_REPLICA': 256,
+                    'COLLATE_FUNCTION': 'default_collate',
+                    'COLLATE_FUNCTION_PARAMS': {},
+                    'COPY_DESTINATION_DIR': '',
+                    'COPY_TO_LOCAL_DISK': False,
+                    'DATASET_NAMES': ['imagenet1k_folder'],
+                    'DATA_LIMIT': -1,
+                    'DATA_PATHS': [],
+                    'DATA_SOURCES': ['synthetic'],
+                    'DEFAULT_GRAY_IMG_SIZE': 224,
+                    'DROP_LAST': False,
+                    'ENABLE_QUEUE_DATASET': False,
+                    'INPUT_KEY_NAMES': ['data'],
+                    'LABEL_PATHS': [],
+                    'LABEL_SOURCES': [],
+                    'LABEL_TYPE': 'sample_index',
+                    'MMAP_MODE': True,
+                    'TARGET_KEY_NAMES': ['label'],
+                    'TRANSFORMS': [],
+                    'USE_STATEFUL_DISTRIBUTED_SAMPLER': False}},
+ 'DISTRIBUTED': {'BACKEND': 'nccl',
+                 'BROADCAST_BUFFERS': True,
+                 'INIT_METHOD': 'tcp',
+                 'MANUAL_GRADIENT_REDUCTION': False,
+                 'NCCL_DEBUG': False,
+                 'NCCL_SOCKET_NTHREADS': '',
+                 'NUM_NODES': 1,
+                 'NUM_PROC_PER_NODE': 8,
+                 'RUN_ID': 'auto'},
+ 'IMG_RETRIEVAL': {'DATASET_PATH': '',
+                   'EVAL_BINARY_PATH': '',
+                   'EVAL_DATASET_NAME': 'Paris',
+                   'FEATS_PROCESSING_TYPE': '',
+                   'GEM_POOL_POWER': 4.0,
+                   'N_PCA': 512,
+                   'RESIZE_IMG': 1024,
+                   'SHOULD_TRAIN_PCA_OR_WHITENING': True,
+                   'SPATIAL_LEVELS': 3,
+                   'TEMP_DIR': '/tmp/instance_retrieval/',
+                   'TRAIN_DATASET_NAME': 'Oxford',
+                   'WHITEN_IMG_LIST': ''},
+ 'LOG_FREQUENCY': 10,
+ 'LOSS': {'CrossEntropyLoss': {'ignore_index': -1},
+          'bce_logits_multiple_output_single_target': {'normalize_output': False,
+                                                       'reduction': 'none',
+                                                       'world_size': 1},
+          'cross_entropy_multiple_output_single_target': {'ignore_index': -1,
+                                                          'normalize_output': False,
+                                                          'reduction': 'mean',
+                                                          'temperature': 1.0,
+                                                          'weight': None},
+          'deepclusterv2_loss': {'BATCHSIZE_PER_REPLICA': 256,
+                                 'DROP_LAST': True,
+                                 'kmeans_iters': 10,
+                                 'memory_params': {'crops_for_mb': [0],
+                                                   'embedding_dim': 128},
+                                 'num_clusters': [3000, 3000, 3000],
+                                 'num_crops': 2,
+                                 'num_train_samples': -1,
+                                 'temperature': 0.1},
+          'moco_loss': {'embedding_dim': 128,
+                        'momentum': 0.999,
+                        'queue_size': 65536,
+                        'temperature': 0.2},
+          'multicrop_simclr_info_nce_loss': {'buffer_params': {'effective_batch_size': 4096,
+                                                               'embedding_dim': 128,
+                                                               'world_size': 64},
+                                             'num_crops': 2,
+                                             'temperature': 0.1},
+          'name': 'CrossEntropyLoss',
+          'nce_loss_with_memory': {'loss_type': 'nce',
+                                   'loss_weights': [1.0],
+                                   'memory_params': {'embedding_dim': 128,
+                                                     'memory_size': -1,
+                                                     'momentum': 0.5,
+                                                     'norm_init': True,
+                                                     'update_mem_on_forward': True},
+                                   'negative_sampling_params': {'num_negatives': 16000,
+                                                                'type': 'random'},
+                                   'norm_constant': -1,
+                                   'norm_embedding': True,
+                                   'num_train_samples': -1,
+                                   'temperature': 0.07,
+                                   'update_mem_with_emb_index': -100},
+          'simclr_info_nce_loss': {'buffer_params': {'effective_batch_size': 4096,
+                                                     'embedding_dim': 128,
+                                                     'world_size': 64},
+                                   'temperature': 0.1},
+          'swav_loss': {'crops_for_assign': [0, 1],
+                        'embedding_dim': 128,
+                        'epsilon': 0.05,
+                        'normalize_last_layer': True,
+                        'num_crops': 2,
+                        'num_iters': 3,
+                        'num_prototypes': [3000],
+                        'output_dir': '',
+                        'queue': {'local_queue_length': 0,
+                                  'queue_length': 0,
+                                  'start_iter': 0},
+                        'temp_hard_assignment_iters': 0,
+                        'temperature': 0.1,
+                        'use_double_precision': False},
+          'swav_momentum_loss': {'crops_for_assign': [0, 1],
+                                 'embedding_dim': 128,
+                                 'epsilon': 0.05,
+                                 'momentum': 0.99,
+                                 'momentum_eval_mode_iter_start': 0,
+                                 'normalize_last_layer': True,
+                                 'num_crops': 2,
+                                 'num_iters': 3,
+                                 'num_prototypes': [3000],
+                                 'queue': {'local_queue_length': 0,
+                                           'queue_length': 0,
+                                           'start_iter': 0},
+                                 'temperature': 0.1,
+                                 'use_double_precision': False}},
+ 'MACHINE': {'DEVICE': 'gpu'},
+ 'METERS': {'accuracy_list_meter': {'meter_names': [],
+                                    'num_meters': 1,
+                                    'topk_values': [1]},
+            'enable_training_meter': True,
+            'mean_ap_list_meter': {'max_cpu_capacity': -1,
+                                   'meter_names': [],
+                                   'num_classes': 9605,
+                                   'num_meters': 1},
+            'name': ''},
+ 'MODEL': {'ACTIVATION_CHECKPOINTING': {'NUM_ACTIVATION_CHECKPOINTING_SPLITS': 2,
+                                        'USE_ACTIVATION_CHECKPOINTING': False},
+           'AMP_PARAMS': {'AMP_ARGS': {'keep_batchnorm_fp32': True,
+                                       'loss_scale': 'dynamic',
+                                       'master_weights': True,
+                                       'opt_level': 'O1'},
+                          'AMP_TYPE': 'apex',
+                          'USE_AMP': False},
+           'CUDA_CACHE': {'CLEAR_CUDA_CACHE': False, 'CLEAR_FREQ': 100},
+           'FEATURE_EVAL_SETTINGS': {'EVAL_MODE_ON': False,
+                                     'EVAL_TRUNK_AND_HEAD': False,
+                                     'EXTRACT_TRUNK_FEATURES_ONLY': False,
+                                     'FREEZE_TRUNK_AND_HEAD': False,
+                                     'FREEZE_TRUNK_ONLY': False,
+                                     'LINEAR_EVAL_FEAT_POOL_OPS_MAP': [],
+                                     'SHOULD_FLATTEN_FEATS': True},
+           'HEAD': {'BATCHNORM_EPS': 1e-05,
+                    'BATCHNORM_MOMENTUM': 0.1,
+                    'PARAMS': [],
+                    'PARAMS_MULTIPLIER': 1.0},
+           'INPUT_TYPE': 'rgb',
+           'MODEL_COMPLEXITY': {'COMPUTE_COMPLEXITY': False,
+                                'INPUT_SHAPE': [3, 224, 224]},
+           'MULTI_INPUT_HEAD_MAPPING': [],
+           'NON_TRAINABLE_PARAMS': [],
+           'SINGLE_PASS_EVERY_CROP': False,
+           'SYNC_BN_CONFIG': {'CONVERT_BN_TO_SYNC_BN': False,
+                              'GROUP_SIZE': -1,
+                              'SYNC_BN_TYPE': 'pytorch'},
+           'TEMP_FROZEN_PARAMS_ITER_MAP': [],
+           'TRUNK': {'NAME': 'resnet',
+                     'RESNETS': {'DEPTH': 50},
+                     'TRUNK_PARAMS': {'EFFICIENT_NETS': {},
+                                      'REGNET': {},
+                                      'RESNETS': {'DEPTH': 50,
+                                                  'GROUPS': 1,
+                                                  'LAYER4_STRIDE': 2,
+                                                  'NORM': 'BatchNorm',
+                                                  'WIDTH_MULTIPLIER': 1,
+                                                  'WIDTH_PER_GROUP': 64,
+                                                  'ZERO_INIT_RESIDUAL': False}}},
+           'WEIGHTS_INIT': {'APPEND_PREFIX': '',
+                            'PARAMS_FILE': '',
+                            'REMOVE_PREFIX': '',
+                            'SKIP_LAYERS': ['num_batches_tracked'],
+                            'STATE_DICT_KEY_NAME': 'classy_state_dict'}},
+ 'MONITOR_PERF_STATS': False,
+ 'MULTI_PROCESSING_METHOD': 'forkserver',
+ 'NEAREST_NEIGHBOR': {'L2_NORM_FEATS': False, 'SIGMA': 0.1, 'TOPK': 200},
+ 'OPTIMIZER': {'head_optimizer_params': {'use_different_lr': False,
+                                         'use_different_wd': False,
+                                         'weight_decay': 0.0001},
+               'larc_config': {'clip': False,
+                               'eps': 1e-08,
+                               'trust_coefficient': 0.001},
+               'momentum': 0.9,
+               'name': 'sgd',
+               'nesterov': False,
+               'num_epochs': 90,
+               'param_schedulers': {'lr': {'auto_lr_scaling': {'auto_scale': False,
+                                                               'base_lr_batch_size': 256,
+                                                               'base_value': 0.1},
+                                           'end_value': 0.0,
+                                           'interval_scaling': [],
+                                           'lengths': [],
+                                           'milestones': [30, 60],
+                                           'name': 'multistep',
+                                           'schedulers': [],
+                                           'start_value': 0.1,
+                                           'update_interval': 'epoch',
+                                           'value': 0.1,
+                                           'values': [0.1, 0.01, 0.001]},
+                                    'lr_head': {'auto_lr_scaling': {'auto_scale': False,
+                                                                    'base_lr_batch_size': 256,
+                                                                    'base_value': 0.1},
+                                                'end_value': 0.0,
+                                                'interval_scaling': [],
+                                                'lengths': [],
+                                                'milestones': [30, 60],
+                                                'name': 'multistep',
+                                                'schedulers': [],
+                                                'start_value': 0.1,
+                                                'update_interval': 'epoch',
+                                                'value': 0.1,
+                                                'values': [0.1, 0.01, 0.001]}},
+               'regularize_bias': True,
+               'regularize_bn': False,
+               'use_larc': False,
+               'weight_decay': 0.0001},
+ 'PERF_STAT_FREQUENCY': -1,
+ 'ROLLING_BTIME_FREQ': -1,
+ 'SEED_VALUE': 0,
+ 'SVM': {'cls_list': [],
+         'costs': {'base': -1.0,
+                   'costs_list': [0.1, 0.01],
+                   'power_range': [4, 20]},
+         'cross_val_folds': 3,
+         'dual': True,
+         'force_retrain': False,
+         'loss': 'squared_hinge',
+         'low_shot': {'dataset_name': 'voc',
+                      'k_values': [1, 2, 4, 8, 16, 32, 64, 96],
+                      'sample_inds': [1, 2, 3, 4, 5]},
+         'max_iter': 2000,
+         'normalize': True,
+         'penalty': 'l2'},
+ 'TENSORBOARD_SETUP': {'EXPERIMENT_LOG_DIR': 'tensorboard',
+                       'FLUSH_EVERY_N_MIN': 5,
+                       'LOG_DIR': '.',
+                       'LOG_PARAMS': True,
+                       'LOG_PARAMS_EVERY_N_ITERS': 310,
+                       'LOG_PARAMS_GRADIENTS': True,
+                       'USE_TENSORBOARD': False},
+ 'TEST_EVERY_NUM_EPOCH': 1,
+ 'TEST_MODEL': True,
+ 'TEST_ONLY': False,
+ 'TRAINER': {'TASK_NAME': 'self_supervision_task',
+             'TRAIN_STEP_NAME': 'standard_train_step'},
+ 'VERBOSE': False}
+INFO 2021-06-24 18:56:23,805 train.py:  89: System config:
+-------------------  ----------------------------------------------------------------
+sys.platform         linux
+Python               3.7.10 (default, May  3 2021, 02:48:31) [GCC 7.5.0]
+numpy                1.19.5
+Pillow               7.1.2
+vissl                0.1.5 @/usr/local/lib/python3.7/dist-packages/vissl
+GPU available        False
+torchvision          0.10.0+cu102 @/usr/local/lib/python3.7/dist-packages/torchvision
+hydra                1.1.0 @/usr/local/lib/python3.7/dist-packages/hydra
+classy_vision        0.6.0.dev @/usr/local/lib/python3.7/dist-packages/classy_vision
+tensorboard          1.15.0
+apex                 unknown
+cv2                  4.1.2
+PyTorch              1.7.1 @/usr/local/lib/python3.7/dist-packages/torch
+PyTorch debug build  False
+-------------------  ----------------------------------------------------------------
+PyTorch built with:
+  - GCC 7.3
+  - C++ Version: 201402
+  - Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191122 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v1.6.0 (Git Hash 5ef631a030a6f73131c77892041042805a06064f)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - Build settings: BLAS=MKL, BUILD_TYPE=Release, CXX_FLAGS= -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DUSE_VULKAN_WRAPPER -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, USE_CUDA=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, 
+
+CPU info:
+-------------------  ------------------------------
+Architecture         x86_64
+CPU op-mode(s)       32-bit, 64-bit
+Byte Order           Little Endian
+CPU(s)               2
+On-line CPU(s) list  0,1
+Thread(s) per core   2
+Core(s) per socket   1
+Socket(s)            1
+NUMA node(s)         1
+Vendor ID            GenuineIntel
+CPU family           6
+Model                79
+Model name           Intel(R) Xeon(R) CPU @ 2.20GHz
+Stepping             0
+CPU MHz              2199.998
+BogoMIPS             4399.99
+Hypervisor vendor    KVM
+Virtualization type  full
+L1d cache            32K
+L1i cache            32K
+L2 cache             256K
+L3 cache             56320K
+NUMA node0 CPU(s)    0,1
+-------------------  ------------------------------
+INFO 2021-06-24 18:56:23,805 train_task.py: 192: Not using Automatic Mixed Precision
+INFO 2021-06-24 18:56:23,806 trainer_main.py: 109: Using Distributed init method: tcp://localhost:33517, world_size: 8, rank: 0
