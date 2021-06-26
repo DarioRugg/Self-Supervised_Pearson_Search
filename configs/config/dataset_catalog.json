@@ -46,5 +46,9 @@
     "google-imagenet1k-per10": {
         "train": ["<img_path>", "<lbl_path>"],
         "val": ["<img_path>", "<lbl_path>"]
+    },
+    "prw_self-supervised": {
+        "train": ["./data/PWR_self_supervised/train", "<lbl_path>"],
+        "val": ["./data/PWR_self_supervised/val", "<lbl_path>"]
     }
 }
