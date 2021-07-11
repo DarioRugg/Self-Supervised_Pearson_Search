@@ -108,3 +108,6 @@ data/
 
 # IDE files
 **/.idea/
+
+# colab git console
+/colab_notebooks/colab_git_console.ipynb
