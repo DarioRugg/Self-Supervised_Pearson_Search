@@ -106,6 +106,9 @@ venv.bak/
 logs/
 data/
 
+# the data shortcut
+data@/
+
 # IDE files
 **/.idea/
 
