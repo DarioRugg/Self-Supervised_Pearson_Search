@@ -12,7 +12,6 @@ import torchvision.models as models
 
 import sys
 sys.path.append('Utils')
-from Layers import LRN
 
 class Network(nn.Module):
 
@@ -45,10 +44,3 @@ class Network(nn.Module):
         x = self.classifier(x)
 
         return x
-
-
-def weights_init(model):
-    if type(model) in [nn.Conv2d,nn.Linear]:
-        nn.init.xavier_normal(model.weight.data)
-        nn.init.constant(model.bias.data, 0.1)
-    
