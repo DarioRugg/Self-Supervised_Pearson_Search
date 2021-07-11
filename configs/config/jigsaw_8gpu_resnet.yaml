@@ -14,6 +14,7 @@ config:
       DATASET_NAMES: [imagenet1k_folder]
       BATCHSIZE_PER_REPLICA: 32
       TRANSFORMS:
+        - name: ToTensor
         - name: Resize
           size: 256
         - name: RandomHorizontalFlip
