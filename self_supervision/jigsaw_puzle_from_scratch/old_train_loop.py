@@ -74,7 +74,7 @@ def main():
     print('Images: train %d, validation %d'%(train_data.N,val_data.N))
     
     # Network initialize
-    net = PretrainedNet(args.classes) if args.pretrained else Network(args.classes)
+    net = PretrainedNet(args.classes)
     
     if args.gpu is not None:
         net.cuda()
