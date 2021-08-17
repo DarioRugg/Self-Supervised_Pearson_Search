@@ -31,7 +31,7 @@ class CustomDataset(Dataset):
             transforms.ToTensor()])
 
     def __retrive_permutations(self, classes):
-        all_perm = np.load(join("permutations", f'permutations_{classes}.npy'))
+        all_perm = np.load(join("self_supervision", "jigsaw_puzle_from_scratch", "permutations", f'permutations_{classes}.npy'))
         # from range [1,9] to [0,8]
         if all_perm.min() == 1:
             all_perm = all_perm - 1

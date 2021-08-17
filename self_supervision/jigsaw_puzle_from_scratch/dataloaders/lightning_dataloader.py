@@ -1,5 +1,6 @@
 from torch.utils.data import DataLoader, random_split
-from self_supervision.jigsaw_puzle_from_scratch.dataloaders.custom_datasets import CustomDataset
+from dataloaders.custom_datasets import CustomDataset
+# from self_supervision.jigsaw_puzle_from_scratch.dataloaders.custom_datasets import CustomDataset
 import torch
 import pytorch_lightning as pl
 
