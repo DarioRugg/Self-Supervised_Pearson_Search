@@ -69,3 +69,11 @@ class Model(pl.LightningModule):
         x_hat = self.decoder(z)
         loss = F.mse_loss(x_hat, x)
         self.log('val_loss', loss)
+
+    def test_step(self, test_batch, batch_idx):
+        x, y = test_batch
+        x = x.view(x.size(0), -1)
+        z = self.encoder(x)
+        x_hat = self.decoder(z)
+        loss = F.mse_loss(x_hat, x)
+        self.log('val_loss', loss)

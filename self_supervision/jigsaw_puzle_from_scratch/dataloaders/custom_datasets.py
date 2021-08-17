@@ -31,7 +31,7 @@ class CustomDataset(Dataset):
             transforms.ToTensor()])
 
     def __retrive_permutations(self, classes):
-        all_perm = np.load(join("self_supervision", "jigsaw_puzle_from_scratch", "permutations", f'permutations_{classes}.npy'))
+        all_perm = np.load(join("permutations", f'permutations_{classes}.npy'))
         # from range [1,9] to [0,8]
         if all_perm.min() == 1:
             all_perm = all_perm - 1
@@ -50,6 +50,7 @@ class CustomDataset(Dataset):
 
         for x_limits, y_limits in list(product(tiles_limits(img.size[0]), tiles_limits(img.size[1]))):
             tile = img.crop(x_limits + y_limits)
+            print(f" --> tiles info;\n  shape: {tile.shape}\n  limits: {x_limits}:{y_limits}")
             tile = self.__augment_tile(tile)
             # Normalize the patches indipendently to avoid low level features shortcut
             m, s = tile.view(3, -1).mean(dim=1), tile.view(3, -1).std(dim=1)

@@ -111,3 +111,4 @@ data/
 
 # colab git console
 /colab_notebooks/colab_git_console.ipynb
+/self_supervision/jigsaw_puzle_from_scratch/checkpoints/
