@@ -6,7 +6,7 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 import torchvision.transforms as transforms
-from PIL import Image
+from torchvision.io import read_image
 
 class CustomDataset(Dataset):
     def __init__(self, data_path, classes=1000):
@@ -28,7 +28,7 @@ class CustomDataset(Dataset):
             transforms.RandomCrop(64),
             transforms.Resize((75, 75), transforms.InterpolationMode.BILINEAR),
             transforms.ColorJitter(saturation=0.01),
-            transforms.ToTensor()])
+            transforms.ConvertImageDtype(torch.float)])
 
     def __retrive_permutations(self, classes):
         all_perm = np.load(join("permutations", f'permutations_{classes}.npy'))
@@ -39,19 +39,21 @@ class CustomDataset(Dataset):
         return all_perm
 
     def __getitem__(self, index):
-        img = Image.open(join(self.data_path, self.names[index])).convert('RGB')
+        # img = Image.open(join(self.data_path, self.names[index])).convert('RGB')
+        img = read_image(join(self.data_path, self.names[index]))
 
         img = self.__image_transformer(img)
 
         tiles_limits = lambda dim_size: zip(np.linspace(0,dim_size, 4, dtype=int)[:-1],
-                                            np.linspace(0,dim_size, 4, dtype=int)[1:])
+                                            np.linspace(0,dim_size, 4, dtype=int)[1:] -
+                                            np.linspace(0,dim_size, 4, dtype=int)[:-1])
 
         tiles = []
 
-        for x_limits, y_limits in list(product(tiles_limits(img.size[0]), tiles_limits(img.size[1]))):
-            tile = img.crop(x_limits + y_limits)
-            print(f" --> tiles info;\n  shape: {tile.shape}\n  limits: {x_limits}:{y_limits}")
+        for (left, width), (top, height) in list(product(tiles_limits(img.shape[1]), tiles_limits(img.shape[2]))):
+            tile = transforms.functional.crop(img, top=top, left=left, height=height, width=width)
             tile = self.__augment_tile(tile)
+
             # Normalize the patches indipendently to avoid low level features shortcut
             m, s = tile.view(3, -1).mean(dim=1), tile.view(3, -1).std(dim=1)
             s[s == 0] = 1
@@ -60,10 +62,9 @@ class CustomDataset(Dataset):
 
         order_idx = np.random.randint(len(self.permutations))
         permuted_tiels = list(map(lambda x: x[-1], sorted(zip(self.permutations[order_idx], tiles)))) # permuting the tiles
-        # data = [tiles[self.permutations[order_idx][t]] for t in range(9)]
         data = torch.stack(permuted_tiels, 0)
 
-        return data, int(order_idx), tiles
+        return data, int(order_idx)
 
     def __len__(self):
         return len(self.names)

@@ -8,9 +8,6 @@ from pytorch_lightning import Trainer
 
 
 def main():
-    # setting device on GPU if available, else CPU
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
     data_path = join("..", "..", "data", "CUHK-SYSU", "Image", "SSM")
     dataset = SelfSupervisionDataModule(data_path)
 
@@ -18,7 +15,7 @@ def main():
     model = PretrainedNet()
 
     # Train the Model
-    trainer = Trainer(gpus=device.index)
+    trainer = Trainer(gpus=1 if torch.cuda.is_available() else 0)
 
     trainer.fit(model, datamodule=dataset)
 

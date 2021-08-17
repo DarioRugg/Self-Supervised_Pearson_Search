@@ -5,7 +5,7 @@ import pytorch_lightning as pl
 
 
 class SelfSupervisionDataModule(pl.LightningDataModule):
-    def __init__(self, data_dir: str = None, permutations=1000, batch_size: int = 16, num_workers: int = 16):
+    def __init__(self, data_dir: str = None, permutations=1000, batch_size: int = 16, num_workers: int = 2):
         super().__init__()
         self.data_dir = data_dir
         self.batch_size = batch_size
