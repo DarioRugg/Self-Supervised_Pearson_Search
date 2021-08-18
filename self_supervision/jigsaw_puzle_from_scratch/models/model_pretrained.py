@@ -3,10 +3,6 @@ import torch.nn as nn
 import torchvision.models as models
 import pytorch_lightning as pl
 
-import sys
-
-sys.path.append('Utils')
-
 
 class Model(pl.LightningModule):
 
@@ -55,25 +51,19 @@ class Model(pl.LightningModule):
 
     def training_step(self, train_batch, batch_idx):
         x, y = train_batch
-        x = x.view(x.size(0), -1)
-        z = self.encoder(x)
-        x_hat = self.decoder(z)
-        loss = F.mse_loss(x_hat, x)
+        y_pred = self.forward(x)
+        loss = nn.CrossEntropyLoss()(y_pred, y)
         self.log('train_loss', loss)
         return loss
 
     def validation_step(self, val_batch, batch_idx):
         x, y = val_batch
-        x = x.view(x.size(0), -1)
-        z = self.encoder(x)
-        x_hat = self.decoder(z)
-        loss = F.mse_loss(x_hat, x)
+        y_pred = self.forward(x)
+        loss = nn.CrossEntropyLoss()(y_pred, y)
         self.log('val_loss', loss)
 
     def test_step(self, test_batch, batch_idx):
         x, y = test_batch
-        x = x.view(x.size(0), -1)
-        z = self.encoder(x)
-        x_hat = self.decoder(z)
-        loss = F.mse_loss(x_hat, x)
+        y_pred = self.forward(x)
+        loss = nn.CrossEntropyLoss()(y_pred, y)
         self.log('val_loss', loss)
