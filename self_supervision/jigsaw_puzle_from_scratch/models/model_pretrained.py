@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 import pytorch_lightning as pl
+from torchmetrics import Accuracy
 
 
 class Model(pl.LightningModule):
@@ -53,17 +54,32 @@ class Model(pl.LightningModule):
         x, y = train_batch
         y_pred = self.forward(x)
         loss = nn.CrossEntropyLoss()(y_pred, y)
+        acc = Accuracy()(y_pred.to("cpu"), y.to("cpu"))
         self.log('train_loss', loss)
-        return loss
+        self.log('train_acc', acc)
+        return {
+            "loss": loss,
+            "progress_bar": {'Loss': loss.detach(), 'Accuracy': acc}
+            }
 
     def validation_step(self, val_batch, batch_idx):
         x, y = val_batch
         y_pred = self.forward(x)
         loss = nn.CrossEntropyLoss()(y_pred, y)
+        acc = Accuracy()(y_pred.to("cpu"), y.to("cpu"))
         self.log('val_loss', loss)
+        self.log('val_acc', acc)
+        return {
+            "progress_bar": {'Loss': loss.detach(), 'Accuracy': acc}
+            }
 
     def test_step(self, test_batch, batch_idx):
         x, y = test_batch
         y_pred = self.forward(x)
         loss = nn.CrossEntropyLoss()(y_pred, y)
-        self.log('val_loss', loss)
+        acc = Accuracy()(y_pred.to("cpu"), y.to("cpu"))
+        self.log('test_loss', loss)
+        self.log('test_acc', acc)
+        return {
+            "progress_bar": {'Loss': loss.detach(), 'Accuracy': acc}
+            }

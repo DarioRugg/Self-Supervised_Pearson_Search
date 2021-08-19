@@ -50,7 +50,7 @@ class CustomDataset(Dataset):
 
         tiles = []
 
-        for (left, width), (top, height) in list(product(tiles_limits(img.shape[1]), tiles_limits(img.shape[2]))):
+        for (top, height), (left, width) in product(tiles_limits(img.shape[2]), tiles_limits(img.shape[1])):
             tile = transforms.functional.crop(img, top=top, left=left, height=height, width=width)
             tile = self.__augment_tile(tile)
 

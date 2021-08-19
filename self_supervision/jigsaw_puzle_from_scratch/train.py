@@ -5,6 +5,7 @@ import torch
 from models.model_pretrained import Model as PretrainedNet
 from dataloaders.lightning_dataloader import SelfSupervisionDataModule
 from pytorch_lightning import Trainer
+from pytorch_lightning.loggers import TensorBoardLogger
 
 
 def main():
@@ -15,7 +16,8 @@ def main():
     model = PretrainedNet()
 
     # Train the Model
-    trainer = Trainer(gpus=1 if torch.cuda.is_available() else 0)
+    logger = TensorBoardLogger("tb_logs", name="test")
+    trainer = Trainer(gpus=1 if torch.cuda.is_available() else 0, logger=logger)
 
     trainer.fit(model, datamodule=dataset)
 
