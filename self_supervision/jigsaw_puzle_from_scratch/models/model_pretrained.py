@@ -55,31 +55,22 @@ class Model(pl.LightningModule):
         y_pred = self.forward(x)
         loss = nn.CrossEntropyLoss()(y_pred, y)
         acc = Accuracy()(y_pred.to("cpu"), y.to("cpu"))
-        self.log('train_loss', loss)
-        self.log('train_acc', acc)
-        return {
-            "loss": loss,
-            "progress_bar": {'Loss': loss.detach(), 'Accuracy': acc}
-            }
+        self.log("loss", {"train": loss})
+        self.log("accuracy", {"train": acc}, prog_bar=True)
+        return loss
 
     def validation_step(self, val_batch, batch_idx):
         x, y = val_batch
         y_pred = self.forward(x)
         loss = nn.CrossEntropyLoss()(y_pred, y)
         acc = Accuracy()(y_pred.to("cpu"), y.to("cpu"))
-        self.log('val_loss', loss)
-        self.log('val_acc', acc)
-        return {
-            "progress_bar": {'Loss': loss.detach(), 'Accuracy': acc}
-            }
+        self.log("loss", {"val": loss})
+        self.log("accuracy", {"val": acc}, prog_bar=True)
 
     def test_step(self, test_batch, batch_idx):
         x, y = test_batch
         y_pred = self.forward(x)
         loss = nn.CrossEntropyLoss()(y_pred, y)
         acc = Accuracy()(y_pred.to("cpu"), y.to("cpu"))
-        self.log('test_loss', loss)
-        self.log('test_acc', acc)
-        return {
-            "progress_bar": {'Loss': loss.detach(), 'Accuracy': acc}
-            }
+        self.log("loss", {"test": loss})
+        self.log("accuracy", {"test": acc}, prog_bar=True)
