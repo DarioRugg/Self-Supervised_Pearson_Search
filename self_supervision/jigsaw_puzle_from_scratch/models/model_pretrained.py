@@ -7,9 +7,10 @@ from torchmetrics import Accuracy
 
 class Model(pl.LightningModule):
 
-    def __init__(self, classes=1000):
+    def __init__(self, classes=1000, lr=1e-3):
         super(Model, self).__init__()
 
+        self.lr = lr
         res50_model = models.resnet50(pretrained=True)
         self.feature_extractor = nn.Sequential(*list(res50_model.children())[:-1])
 
@@ -47,7 +48,7 @@ class Model(pl.LightningModule):
         return x
 
     def configure_optimizers(self):
-        optimizer = torch.optim.Adam(self.parameters(), lr=1e-3)
+        optimizer = torch.optim.Adam(self.parameters(), lr=self.lr)
         return optimizer
 
     def training_step(self, train_batch, batch_idx):

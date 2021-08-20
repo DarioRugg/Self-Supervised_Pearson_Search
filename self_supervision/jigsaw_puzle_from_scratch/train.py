@@ -8,6 +8,11 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import TensorBoardLogger
 
 
+args = {
+    "lr": 1e-4
+
+}
+
 def main():
     data_path = join("..", "..", "data", "CUHK-SYSU", "Image", "SSM")
     dataset = SelfSupervisionDataModule(data_path)

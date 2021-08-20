@@ -20,14 +20,14 @@ class CustomDataset(Dataset):
         self.permutations = self.__retrive_permutations(classes)
 
         self.__image_transformer = transforms.Compose([
-            transforms.RandomGrayscale(p=0.3),
-            transforms.Resize(256, transforms.InterpolationMode.BILINEAR),
-            transforms.CenterCrop(255)])
+            transforms.RandomGrayscale(p=0.2),
+            transforms.Resize(256),
+            transforms.RandomCrop(255)])
 
         self.__augment_tile = transforms.Compose([
             transforms.RandomCrop(64),
-            transforms.Resize((75, 75), transforms.InterpolationMode.BILINEAR),
-            transforms.ColorJitter(saturation=0.01),
+            transforms.Resize((75, 75)),
+            transforms.ColorJitter(saturation=0.005),
             transforms.ConvertImageDtype(torch.float)])
 
     def __retrive_permutations(self, classes):
