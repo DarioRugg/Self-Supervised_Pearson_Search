@@ -1,3 +1,4 @@
+import os
 from os.path import join
 
 import torch
@@ -9,8 +10,8 @@ from pytorch_lightning.loggers import TensorBoardLogger
 
 
 args = {
-    "lr": 1e-4
-
+    "lr": 1e-4,
+    "epochs": 30
 }
 
 def main():
@@ -18,14 +19,16 @@ def main():
     dataset = SelfSupervisionDataModule(data_path)
 
     # Network initialize
-    model = PretrainedNet()
+    model = PretrainedNet(lr = args["lr"])
 
     # Train the Model
     logger = TensorBoardLogger("tb_logs", name="test")
-    trainer = Trainer(gpus=1 if torch.cuda.is_available() else 0, logger=logger)
+    trainer = Trainer(gpus=1 if torch.cuda.is_available() else 0, max_epochs=args["epochs"], logger=logger)
 
     trainer.fit(model, datamodule=dataset)
 
+    if not os.path.exists("checkpoints"):
+        os.makedirs("checkpoints")
     model.save(join("checkpoints", "test_checkpoint"))
 
 
