@@ -1,0 +1,4 @@
+sim_name: "test"
+model:
+  lr: 1e-4
+  epochs: 30
