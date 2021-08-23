@@ -8,6 +8,8 @@ from torch.utils.data import Dataset
 import torchvision.transforms as transforms
 from torchvision.io import read_image
 
+from hydra.utils import get_original_cwd
+
 class CustomDataset(Dataset):
     def __init__(self, data_path, classes=1000):
         super().__init__()
@@ -31,7 +33,7 @@ class CustomDataset(Dataset):
             transforms.ConvertImageDtype(torch.float)])
 
     def __retrive_permutations(self, classes):
-        all_perm = np.load(join("permutations", f'permutations_{classes}.npy'))
+        all_perm = np.load(join(get_original_cwd(), "permutations", f'permutations_{classes}.npy'))
         # from range [1,9] to [0,8]
         if all_perm.min() == 1:
             all_perm = all_perm - 1

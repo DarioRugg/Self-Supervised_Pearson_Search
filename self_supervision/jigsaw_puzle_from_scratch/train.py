@@ -16,7 +16,7 @@ os.environ['HYDRA_FULL_ERROR'] = '1'
 
 @hydra.main(config_path="conf", config_name="config")
 def main(cfg: DictConfig):
-    print("Config:\n", OmegaConf.to_yaml(cfg))
+    print("Config:\n", OmegaConf.to_yaml(cfg), sep="")
 
     data_path = join(get_original_cwd(), "..", "..", "data", "CUHK-SYSU", "Image", "SSM")
     checkpoint_path = join("checkpoints")
