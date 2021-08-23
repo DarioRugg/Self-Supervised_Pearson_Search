@@ -10,13 +10,15 @@ from pytorch_lightning.loggers import TensorBoardLogger
 
 import hydra
 from omegaconf import DictConfig, OmegaConf
+from hydra.utils import get_original_cwd
 
+os.environ['HYDRA_FULL_ERROR'] = '1'
 
 @hydra.main(config_path="conf", config_name="config")
 def main(cfg: DictConfig):
     print("Config:\n", OmegaConf.to_yaml(cfg))
 
-    data_path = join("..", "..", "data", "CUHK-SYSU", "Image", "SSM")
+    data_path = join(get_original_cwd(), "..", "..", "data", "CUHK-SYSU", "Image", "SSM")
     checkpoint_path = join("checkpoints")
     dataset = SelfSupervisionDataModule(data_path)
 
